@@ -8,7 +8,7 @@ import AOS from "aos"
 import Loginpage from "./pages/Loginpage";
 import Signuppage from "./pages/Signuppage";
 import AdminPage from "./pages/admin/AdminPage";
-import ReservationListPage from "./pages/admin/reservationListPage";
+// import ReservationListPage from "./pages/admin/reservationListPage";
 import DashboardPage from "./pages/admin/DashboardPage";
 import { ToastContainer } from 'react-toastify';
 import PendingOrdersPage from "./pages/admin/PendingOrdersPage";
@@ -22,6 +22,7 @@ import UserOrderPage from "./pages/UserOrderPage";
 import FoodOrdersPage from "./pages/admin/FoodOrdersPage";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
+import ReservationListPage from "./pages/admin/ReservationListPage";
 
 function App() {
 
