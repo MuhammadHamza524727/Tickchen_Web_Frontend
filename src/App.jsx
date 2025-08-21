@@ -52,16 +52,17 @@ function App() {
       <Router>
         <Routes>
           <Route path="/homepage" element=
-          {<ProtectedRoute>
-              <Homepage />
-            </ProtectedRoute>} />
+          {
+             <ProtectedRoute> <Homepage /></ProtectedRoute>}
+             />
           <Route path="/menupage" element={<ProtectedRoute><MenuPage /></ProtectedRoute>} />
           <Route path="/aboutpage" element={<Aboutpage />} />
           <Route path="/reservationpage" element={ <ProtectedRoute><ReservationPage /></ProtectedRoute> } />
           <Route path="/" element={<Loginpage />} />
+          
           <Route path="/signuppage" element={<Signuppage />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/profilepage" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+          <Route path="/profilepage" element={<ProfilePage />} />
           <Route path="/contactpage" element={<ComingSoon />} />
           <Route path="/blogpage" element={<ComingSoon />} />
           <Route path="/success" element={<Success />} />

@@ -26,14 +26,16 @@ const Login = () => {
     };
     // console.log(loginData)
     try {
-      const response = await axios.post('https://tickchen-web-backend.vercel.app/api/auth/login', loginData,
+      const response = await axios.post('http://localhost:8080/api/auth/login', loginData,
         {
           withCredentials: true,
-          headers: { "Content-Type": "application/json" }
+          // headers: { "Content-Type": "application/json" }
+          
         }
       );
+      localStorage.setItem("token", response.data.token);
 
-      console.log(response);
+      console.log(response.data.token,"res.data.token ");
 
 
 
@@ -50,7 +52,6 @@ const Login = () => {
         },
       });
 
-      localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
 
       // setTimeout(() => {

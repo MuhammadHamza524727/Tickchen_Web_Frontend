@@ -30,7 +30,11 @@ const ProfilePage = () => {
       const res = await axios.get("https://tickchen-web-backend.vercel.app/api/user/profile", {
         withCredentials: true,
       });
-      setProfile(res.data); // data = { username, email, role, profileImage }
+
+      
+      setProfile(res.data);
+      
+      // data = { username, email, role, profileImage }
     } catch (err) {
       console.error("Profile fetch error:", err);
     }
@@ -77,7 +81,7 @@ const ProfilePage = () => {
         <div className="w-10 h-10 border-4 border-pink-500 border-t-transparent rounded-full animate-spin"></div>
         <p className="mt-4 text-gray-300 text-sm"></p>
       </div>
-    </div>;;
+    </div>;
 
   return (
     <div
